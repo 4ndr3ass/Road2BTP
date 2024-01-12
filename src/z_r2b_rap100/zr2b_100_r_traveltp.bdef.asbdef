@@ -4,25 +4,24 @@ with draft;
 
 define behavior for ZR2B_100_R_TRAVELTP alias Travel
 persistent table zr2b_100_atrav
-draft table ZR2B_100_DTRAV
+draft table zr2b_100_dtrav
 etag master LocalLastChangedAt
 lock master total etag LastChangedAt
-authorization master( global )
-
+authorization master ( global )
+early numbering
 {
-  field ( mandatory : create )
-   TravelID;
+   field ( mandatory : create )
+    TravelID;
 
   field ( readonly )
-   CreatedAt,
-   CreatedBy,
-   LastChangedAt,
-   LocalLastChangedAt,
-   LocalLastChangedBy;
+  CreatedAt,
+  CreatedBy,
+  LastChangedAt,
+  LocalLastChangedAt,
+  LocalLastChangedBy;
 
   field ( readonly : update )
-   TravelID;
-
+  TravelID;
 
   create;
   update;
@@ -34,25 +33,25 @@ authorization master( global )
   draft action Resume;
   draft determine action Prepare;
 
-  mapping for ZR2B_100_ATRAV
-  {
-    TravelID = travel_id;
-    AgencyID = agency_id;
-    CustomerID = customer_id;
-    BeginDate = begin_date;
-    EndDate = end_date;
-    BookingFee = booking_fee;
-    TotalPrice = total_price;
-    CurrencyCode = currency_code;
-    Description = description;
-    OverallStatus = overall_status;
-    Attachment = attachment;
-    MimeType = mime_type;
-    FileName = file_name;
-    CreatedBy = created_by;
-    CreatedAt = created_at;
-    LocalLastChangedBy = local_last_changed_by;
-    LocalLastChangedAt = local_last_changed_at;
-    LastChangedAt = last_changed_at;
-  }
+  mapping for zr2b_100_atrav
+    {
+      TravelID           = travel_id;
+      AgencyID           = agency_id;
+      CustomerID         = customer_id;
+      BeginDate          = begin_date;
+      EndDate            = end_date;
+      BookingFee         = booking_fee;
+      TotalPrice         = total_price;
+      CurrencyCode       = currency_code;
+      Description        = description;
+      OverallStatus      = overall_status;
+      Attachment         = attachment;
+      MimeType           = mime_type;
+      FileName           = file_name;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
 }

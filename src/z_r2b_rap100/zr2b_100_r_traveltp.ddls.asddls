@@ -2,9 +2,9 @@
 @EndUserText.label: '##GENERATED Travel 2 BTP'
 define root view entity ZR2B_100_R_TRAVELTP
   as select from zr2b_100_atrav as Travel
-  association [0..1] to /DMO/I_Agency as _Agency on $projection.AgencyID = _Agency.AgencyID
-  association [0..1] to /DMO/I_Customer as _Customer on $projection.CustomerID = _Customer.CustomerID
-  association of one to one /DMO/I_Overall_Status_VH as _OverallStatus on $projection.OverallStatus = _OverallStatus.OverallStatus
+  association [0..1] to ZR2B_I_Agency as _Agency on $projection.AgencyID = _Agency.AgencyID
+  association [0..1] to ZR2B_I_Customer as _Customer on $projection.CustomerID = _Customer.CustomerID
+  association of one to one zr2b_I_Overall_Status_VH as _OverallStatus on $projection.OverallStatus = _OverallStatus.OverallStatus
   association [0..1] to I_Currency as _Currency on $projection.CurrencyCode = _Currency.Currency
 {
   key travel_id as TravelID,

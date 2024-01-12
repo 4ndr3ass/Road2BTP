@@ -13,16 +13,16 @@ define root view entity ZR2B_100_C_TRAVELTP
   key TravelID,
       @Search.defaultSearchElement: true
       @ObjectModel.text.element: [ 'AgencyName' ]
-      @Consumption.valueHelpDefinition: [{ entity : {   name: '/DMO/I_Agency_StdVH',
-                                                        element: 'AgencyID'},
-                                           useForValidation: true }]
+//      @Consumption.valueHelpDefinition: [{ entity : {   name: '/DMO/I_Agency_StdVH',
+//                                                        element: 'AgencyID'},
+//                                           useForValidation: true }]
       AgencyID,
       _Agency.Name              as AgencyName,
       @Search.defaultSearchElement: true
       @ObjectModel.text.element: [ 'CustomerName' ]
-      @Consumption.valueHelpDefinition: [{ entity:{ name: '/DMO/I_Customer_StdVH',
-                                                    element: 'CustomerID' }, 
-                                           useForValidation: true }]
+//      @Consumption.valueHelpDefinition: [{ entity:{ name: '/DMO/I_Customer_StdVH',
+//                                                    element: 'CustomerID' }, 
+//                                           useForValidation: true }]
       CustomerID,
       _Customer.LastName        as CustomerName,
       BeginDate,
@@ -37,7 +37,7 @@ define root view entity ZR2B_100_C_TRAVELTP
       Description,
       
       @ObjectModel.text.element: [ 'OverallStatusText' ]
-      @Consumption.valueHelpDefinition: [{ entity: { name: '/DMO/I_Overall_Status_VH', 
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zr2b_I_Overall_Status_VH', 
                                                      element: 'OverallStatus' },
                                            useForValidation: true }]
       OverallStatus,
