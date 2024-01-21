@@ -1,4 +1,0 @@
-@EndUserText.label: 'Service definition for ZR2B_100_C_TRAVELTP'
-define service ZR2B_100_UI_TRAVEL {
-  expose ZR2B_100_C_TRAVELTP as Travel;
-}

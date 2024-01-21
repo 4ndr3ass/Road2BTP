@@ -1,4 +1,0 @@
-@EndUserText.label: 'Service definition for ZR2B_C_CONNECTION'
-define service ZUI_R2B_ACONN_O4 {
-  expose ZR2B_C_CONNECTION as Connection;
-}
